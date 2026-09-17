@@ -3,15 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coming soon</title>
+  <title>Spectacle — Coming soon</title>
   <style>
     :root {
       --bg: #ffffff;
+      --text: #1a1a1a;
+      --muted: #6b6b6b;
     }
 
     @media (prefers-color-scheme: dark) {
       :root {
         --bg: #141414;
+        --text: #f2f2f2;
+        --muted: #9a9a9a;
       }
     }
 
@@ -27,21 +31,54 @@
 
     body {
       background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 2rem;
     }
 
+    .wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1.5rem;
+    }
+
     .logo {
       display: block;
       width: 100%;
-      max-width: 450px;
+      max-width: 320px;
       height: auto;
+    }
+
+    p {
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+    }
+
+    a {
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 1px;
+      transition: color 0.15s ease;
+    }
+
+    a:hover,
+    a:focus-visible {
+      color: var(--text);
+      outline: none;
     }
   </style>
 </head>
 <body>
-  <img class="logo" src="spectacle_logo.png" alt="Spectacle logo">
+  <div class="wrap">
+    <img class="logo" src="spectacle_logo.png" alt="Spectacle">
+    <p>Coming soon</p>
+    <p><a href="mailto:chris@spectacle.archi">Contact</a></p>
+  </div>
 </body>
 </html>
